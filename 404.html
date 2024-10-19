@@ -3,40 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Halaman Tidak ada</title>
-    <link rel="404.html">
+    <title>404 - Halaman Tidak Ditemukan</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #000000;
+            background-color: #f8f8f8;
+            font-family: 'Arial', sans-serif;
+            color: #333;
             text-align: center;
             padding: 50px;
         }
+
         h1 {
-            font-size: 50px;
-            color: #ffffff;
+            font-size: 100px;
+            margin: 0;
+            color: #ff6347;
         }
+
+        h2 {
+            font-size: 26px;
+            margin: 20px 0;
+        }
+
         p {
-            font-size: 20px;
-            color: #ffffff;
+            font-size: 18px;
         }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .robot {
+            max-width: 300px;
+            margin: 0 auto 30px;
+        }
+
         a {
-            color: #3498db;
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: white;
             text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
         }
+
         a:hover {
-            text-decoration: underline;
+            background-color: #ff4500;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .robot img {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .error-message {
+            font-size: 16px;
+            color: #777;
         }
     </style>
 </head>
 <body>
-    <h1>404</h1>
-    <p>WHOOOPSSSS salahh nihhh.</p>
-    <p><a href="index.html">Kembali ke halaman utama</a></p>
-
-
- <img src="gambar/animasi.gif" alt="Animasi GIF" />
-    <p> Di cobaaa lagi yaa sampee bisaa!!!</p>
-    <p> kalo belum bisa ya coba lagii :p </p>
+    <div class="container">
+        <h1>404</h1>
+        <h2>Oops! Halaman yang kamu cari tidak ditemukan.</h2>
+        <div class="robot">
+            <img src="https://example.com/robot.png" alt="Robot Lost" width="300">
+        </div>
+        <p>Sepertinya robot kami juga tersesat...<br>Tenang, kami akan segera membawanya kembali ke jalur yang benar!</p>
+        <p class="error-message">Sementara itu, kamu bisa kembali ke <a href="/">beranda</a> kami atau coba gunakan navigasi di atas.</p>
+        <a href="/">Kembali ke Beranda</a>
+    </div>
 </body>
 </html>
