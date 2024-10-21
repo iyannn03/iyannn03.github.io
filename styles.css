@@ -23,3 +23,12 @@ section:hover {
     transform: translateY(-5px);
 }
 
+header {
+    background-color: #16c2f7;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-out;
+}
+
