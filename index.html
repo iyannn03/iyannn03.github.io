@@ -7,8 +7,7 @@
     <meta name="description" content="Website pribadi Adryan Nur Arif, mahasiswa Teknik Informatika yang tertarik pada teknologi.">
     <title>Website Pribadi</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="gambar" href="gambar/robot 404.jpg">
-    
+    <link rel="icon" type="image/jpeg" href="gambar/robot404.jpg">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,9 +16,15 @@
             background-color: #f4f4f4;
         }
         header {
-            background-color: #16c2f7;
+            background-image: url('path/to/your/image.jpg'); /* Ganti dengan jalur gambar Anda */
+            background-size: cover; /* Membuat gambar menutupi seluruh area */
+            background-position: center; /* Memposisikan gambar di tengah */
+            height: 400px; /* Tinggi header */
             color: white;
-            padding: 15px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Menyusun konten di tengah secara vertikal */
+            align-items: center; /* Menyusun konten di tengah secara horizontal */
             text-align: center;
         }
         nav {
@@ -35,7 +40,7 @@
             border-radius: 8px;
             text-align: center;
             text-decoration: none;
-            flex: 1; /* Membuat tombol memiliki ukuran yang sama */
+            flex: 1;
         }
         .nav-button:hover {
             background-color: #ddd;
