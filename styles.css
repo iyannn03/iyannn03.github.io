@@ -7,7 +7,7 @@ nav a {
 
 nav a:hover {
     background-color: #ff6347;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 section {
