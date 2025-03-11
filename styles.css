@@ -1,0 +1,71 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+header {
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f39c12;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .social-links a {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
