@@ -1,16 +1,52 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
-body {
-    font-family: 'Poppins', sans-serif;
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     color: white;
+    scroll-behavior: smooth;
+    overflow: hidden; /* Menghilangkan scroll default */
+}
+
+/* Wrapper untuk slide */
+.wrapper {
+    width: 100%;
+    height: 200vh; /* 2x tinggi layar untuk 2 slide */
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+/* Setiap section sebagai slide */
+section {
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
     justify-content: center;
+    scroll-snap-align: start;
+}
+
+/* Bagian pertama (Home) */
+#home {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+/* Bagian kedua (Projects) */
+#projects {
+    background: linear-gradient(to right, #1a2a3a, #243b55, #405166);
+}
+
+/* Animasi Fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 header {
@@ -28,11 +64,7 @@ p {
     font-size: 1.2rem;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
+/* Social Media Links */
 .social-links {
     display: flex;
     gap: 20px;
@@ -59,6 +91,75 @@ p {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
+/* Tombol Scroll ke Projects */
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+/* Projects Section */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 250px;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.project-card img {
+    width: 100%;
+    max-height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+}
+
+.project-card p {
+    font-size: 0.9em;
+    color: #ddd;
+}
+
+.project-card a {
+    display: inline-block;
+    padding: 6px 10px;
+    margin-top: 10px;
+    background: #ff9800;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+/* Responsif */
 @media (max-width: 600px) {
     h1 {
         font-size: 2rem;
