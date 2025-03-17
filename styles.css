@@ -12,6 +12,11 @@ html, body {
     color: white;
     scroll-behavior: smooth;
     overflow: hidden; /* Menghilangkan scroll default */
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
 /* Wrapper untuk slide */
